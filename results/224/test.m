@@ -1,0 +1,44 @@
+clear
+
+M = 2; P = 4; N = 5; R = 33; S = 0; T = 2;
+
+if S == 0 && T == 0
+    n = sprintf('results_%d%d%d_%dR_rng1-50-10-2_randn_ALM_ul1.mat',M,P,N,R);
+else
+    n = sprintf('results_%d%d%d_%dR_%dS_%dT_rng1-50-10-2_randn_ALM_ul1.mat',M,P,N,R,S,T);
+end
+
+load(n);
+
+if isfield(res.opt,'test_manopt_grad')
+    res.opt = rmfield(res.opt,'test_manopt_grad');
+end
+if isfield(res.opt,'reg')
+    res.opt = rmfield(res.opt,'reg');
+end
+if isfield(res,'time')
+    res = rmfield(res,'time');
+end
+
+save(n,'res')
+
+if S == 0 && T == 0
+    n = sprintf('results_%d%d%d_%dR_rng1-50-10-2_randn_ALM_ul1_discr_beta0.1.mat',M,P,N,R);
+else
+    n = sprintf('results_%d%d%d_%dR_%dS_%dT_rng1-50-10-2_randn_ALM_ul1_discr_beta0.1.mat',M,P,N,R,S,T);
+end
+
+load(n);
+
+if isfield(res.opt,'test_manopt_grad')
+    res.opt = rmfield(res.opt,'test_manopt_grad');
+end
+if isfield(res.opt,'reg')
+    res.opt = rmfield(res.opt,'reg');
+end
+if isfield(res,'time')
+    res = rmfield(res,'time');
+end
+
+save(n,'res')
+
