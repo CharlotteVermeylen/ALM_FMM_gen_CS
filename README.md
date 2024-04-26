@@ -5,7 +5,7 @@ Vermeylen, C., Van Barel, M. Stability improvements for fast matrix multiplicati
 
 for the fast matrix multiplication problem (FMM) to include the generalized cyclic symmetric (CS) structure for polyadic decompositions (PDs) of matrix multiplication tensors (MMTs) proposed in:
 
-Vermeylen, C., Van Barel, M. Generalized cyclic symmetric decompositions for the matrix multiplication tensor. https://doi.org/10.48550/arXiv.2310.02794 ,
+Vermeylen, C., Van Barel, M. Generalized cyclic symmetric decompositions for the matrix multiplication tensor. https://doi.org/10.48550/arXiv.2310.02794,
 
 to reduce the number of variables in the optimization problem and improve the convergence. The experiments that are presented in the manuscript are saved in the folder ‘results’ for different problem parameters.
 
